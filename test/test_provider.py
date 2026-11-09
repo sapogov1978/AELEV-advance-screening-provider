@@ -23,7 +23,7 @@ from aelev_advance_screening_provider.engine import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-DIGEST = "sha256:65127af357546bbba3ecac142e52eae38fbc1a23a3aff4bf15f81c481afec40a"
+DIGEST = "sha256:86f668d8bbf64a0eb88127e2740f1f94fbec0514f99d607494509661acbed982"
 OUTPUT: dict[str, object] = {
     "outcome": "REVIEW",
     "model_response": {

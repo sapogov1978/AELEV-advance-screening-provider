@@ -4,7 +4,7 @@
   "provider": "openai",
   "selected_at": "2026-11-09",
   "selection_policy": "OPERATOR_APPROVED_OPAQUE_REMOTE_API",
-  "execution_ref": "openai-responses@sha256:b4c5b28f6cd491ea0d1be8d28a4e6bedfacb9e8f72c08cb98574a27133338f52",
+  "execution_ref": "openai-responses@sha256:5768c18fd0ca951513a0acd376bf4f1d67cdeac5ee7e84b35381663313785539",
   "api": {
     "endpoint": "https://api.openai.com/v1/responses",
     "model": "gpt-6.1-sol",
@@ -12,7 +12,7 @@
     "max_output_tokens": 8192,
     "store": false,
     "prompt_profile": "site-relevance-v1",
-    "prompt_sha256": "3e551ae41800618152439dab7506259ba81ffdb99088d1dae90f256ade98c43e"
+    "prompt_sha256": "db151a2ef41ac66693eaad3f6250ecc6fc8c53f2e53307b9eb592391a029d8a7"
   },
   "transport": {
     "mode": "direct-https",
