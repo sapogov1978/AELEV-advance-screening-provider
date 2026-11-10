@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aelev-advance-screening-provider"
-version = "0.1.2"
+version = "0.1.3"
 description = "Independent OpenAI-backed provider behind the Advance Screening opaque compute port"
 requires-python = ">=3.13"
 dependencies = [

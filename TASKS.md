@@ -8,5 +8,5 @@
   [provider-release-v0.1.2-20261110.md](docs/audit/provider-release-v0.1.2-20261110.md).
 - [ ] Complete functional-owner policy-scope admission and deployed worker E2E.
 - [ ] Close exact-image vulnerability admission after runtime hardening; see
-  [current evidence](docs/audit/runtime-security-20261110.md).
+  [scoped pre-release evidence](docs/audit/runtime-security-20261111.md).
 - [ ] Exercise the exact image with production mTLS identities.

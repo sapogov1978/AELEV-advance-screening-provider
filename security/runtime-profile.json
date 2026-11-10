@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "profile": "opaque-python-provider-bookworm-v1",
+  "reviewed_at": "2026-11-10T23:25:14.864108+00:00",
+  "scope": "Default opaque provider entrypoint; non-root UID 10001, read-only root, zero effective capabilities, no-new-privileges. Individual CVE conditions are checked against this exact reviewed source and dependency set. Not general-purpose OS CLI use.",
+  "python_version": "3.13.7",
+  "application_sources_sha256": {
+    "src/aelev_advance_screening_provider/__init__.py": "d59254a7f613e77386f4e7737d65ec1dfa278460097e86ec8f719eda3f78c892",
+    "src/aelev_advance_screening_provider/__main__.py": "30d41a1d90a57e0ae06859b704b6007be25d41e14cda2051f156a2a008208f8f",
+    "src/aelev_advance_screening_provider/app.py": "722fa62e4134f50fee481a82032ae469a95c7bacfbb1791e746174580d21bed7",
+    "src/aelev_advance_screening_provider/contract.py": "099726baff0ff70f499781edd0a8de1beb785ab312cb59a594c21c15b85de4b2",
+    "src/aelev_advance_screening_provider/engine.py": "10d0d77f53f24d78dafeac0028b49eeae49722342b6443f2642f7ebd803a706c",
+    "src/aelev_advance_screening_provider/health.py": "1a6860b88b1d1273e64d77e17c1d46246bb6924117805e6565c96ee14097cd37"
+  },
+  "dependency_lock_sha256": "5f69f6ec0ae7ca9daa3514d76b70efc1e6891d68ce3c31370b9993a0e3bce22b",
+  "provider_lock_sha256": "9b4001b4327f5f0b1258346f44efa0ac82ccc7ba6e68a0174cb9abc4693fee83",
+  "runtime_dependencies": {
+    "annotated-doc": "0.0.5",
+    "annotated-types": "0.8.0",
+    "anyio": "4.16.0",
+    "certifi": "2026.10.23",
+    "click": "8.5.1",
+    "fastapi": "0.141.1",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "idna": "3.20",
+    "pydantic": "2.14.3",
+    "pydantic-core": "2.50.4",
+    "starlette": "1.3.1",
+    "typing-extensions": "4.16.0",
+    "typing-inspection": "0.4.5",
+    "uvicorn": "0.35.0"
+  },
+  "gate_sources_sha256": {
+    "tools/provider_security.py": "9b37357e205e933fc16485aa8e296b5915b0f562af09ad411a5811b0bde308dc",
+    "tools/runtime_surface_probe.py": "8ef07fc418786ba3b51efe387a4f275fe10a7eb1bacf20279400f0ca0b3e4282"
+  }
+}
