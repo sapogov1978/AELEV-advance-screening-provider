@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_PROVIDER_QUALITY_PASS",
+  "release_tag": "v0.1.1",
+  "owner": "advance-screening",
+  "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:08fcc405d0c87b5811f7c5b9d8fdeff610e838d483b8ec923a42cdff112bb2a3",
+  "artifact_source_commit": "eea10267d94768c3e051ed58d550e1e40ba1fbde",
+  "release_digest": "sha256:86f668d8bbf64a0eb88127e2740f1f94fbec0514f99d607494509661acbed982",
+  "live_architecture": "linux/arm64",
+  "evaluation_scope": "SITE_RELEVANCE real queue material and current policy",
+  "started_at": "2026-11-10T21:07:09.350869+00:00",
+  "finished_at": "2026-11-10T21:10:36.366834+00:00",
+  "corpus_sha256": "f484b28885e49cf392bc64e02d42fc7e468ffb3c7443841d0793ed03768a4d29",
+  "case_count": 4,
+  "semantic_reviewer": "Codex",
+  "cases": [
+    {
+      "id": "real-queued-site-current-policy",
+      "provenance": {
+        "source": "advance-screening persisted result and collection",
+        "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "input_sha256": "eba68008ee0025e3a64d74a67c8cfaccc3e8b2783b3c420bbbf8fa0f010809ee",
+      "output_sha256": "e72c415cd3cbd1ae26b9ff795ee51000eb20c9759ef968a7d673d143187f9c48",
+      "elapsed_seconds": 6.5,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "real-church-service-current-policy",
+      "provenance": {
+        "source": "advance-screening own queue; immutable Base handoff replay, not full Advance collection",
+        "job_id": "2172f90e-4fc5-53b7-96b2-57f3b88aab3b",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "input_sha256": "5f3b8279b3ca69e6a5fad9ac9328a703e67059126d2bcbfec7d0d2f0c263281c",
+      "output_sha256": "61b99802b174444189dd22c214079110ea664f95e5527221f78f9abcb90eee4c",
+      "elapsed_seconds": 6.597,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "real-parked-domain-current-policy",
+      "provenance": {
+        "source": "advance-screening own queue; immutable Base handoff replay, not full Advance collection",
+        "job_id": "69e89d61-52bb-5289-aee3-0e1cfecf1227",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "input_sha256": "1cd9c705939d796d4af52e1e7ffac12eafedf9d411844242d36b83e5b0de4e96",
+      "output_sha256": "1ab9bda599fec94f23931efcdb39c2bf2d1a0feabc6b7919bc95fdbfd68a1c75",
+      "elapsed_seconds": 6.763,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "same-queue-site-evidence-withheld",
+      "provenance": {
+        "source": "Explicit incomplete-evidence regression derived from actual queue site",
+        "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REVIEW",
+      "observed": "REVIEW",
+      "input_sha256": "47184519658507f14f53fde6d66c8f4f77d3b965bf2753b040237652c2ae4fbc",
+      "output_sha256": "3d388e6a66f57d8fd493eb0604d2fa33267f802508582e90887cc8c97bf289a6",
+      "elapsed_seconds": 2.896,
+      "semantic_review": "PASS"
+    }
+  ],
+  "supply_chain": {
+    "release_run": 42900424270,
+    "signature_identity": "https://github.com/sapogov1978/AELEV-advance-screening-provider/.github/workflows/release.yml@refs/tags/v0.1.1",
+    "signature_issuer": "https://token.actions.githubusercontent.com",
+    "platforms": [
+      "linux/amd64",
+      "linux/arm64"
+    ]
+  },
+  "evidence_sha256": {
+    "advance-screening-quality.json": "c2d3f654bfa1f327c696ddc687382866dfbd65d47b2e64fe6befb5452cde5645",
+    "signature.json": "401885f1a3f89383807263f51620aca306f1c21da7f5a52a56a5195a4ca53f6f",
+    "manifest.json": "08fcc405d0c87b5811f7c5b9d8fdeff610e838d483b8ec923a42cdff112bb2a3",
+    "provenance.json": "78185f7f5eca19e07b52f5056439b740270d3e15c9e4a69f93f59a1b4594b4e8",
+    "sbom.json": "1d07e0528a08d8ec17dfdad6bab8b52f0ca7bb78b87b4ef80eb5dc85941344ad"
+  },
+  "mtls_scope": "ISOLATED_TEST_IDENTITIES",
+  "anonymous_tls_rejected": true,
+  "wrong_release_rejected": true,
+  "cleanup_preserved": true,
+  "queue_resume_issued": false,
+  "raw_evidence_path": "/var/tmp/aelev-production-admission.wDuzQd/advance-v011/advance-screening-quality.json",
+  "remaining_gates": [
+    "FUNCTIONAL_OWNER_ADMISSION",
+    "PERMANENT_OWNER_IDENTITIES",
+    "OWNER_WORKER_E2E"
+  ]
+}

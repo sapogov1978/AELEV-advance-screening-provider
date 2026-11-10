@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Recorded exact v0.1.1 signature, SBOM/provenance and native arm64 mTLS replay
+  of four real-queue cases: ACCEPT, two REJECT and withheld-evidence REVIEW.
 - Fixed false-positive Docker health: a placeholder credential could previously
   return HTTP 503 while its listening TCP port made the image healthy. The
   non-billable health CLI now checks serving-process inference readiness.
