@@ -1,5 +1,6 @@
 # Tasks
 
+- [x] Make blocked inference unhealthy and prove it in a networkless Docker CI test.
 - [x] Supply a provider-specific OpenAI API key outside Git.
 - [x] Publish and verify a signed multi-platform image with SBOM and provenance.
 - [x] Run bounded `SITE_RELEVANCE` evaluation using real queue material and record
