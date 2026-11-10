@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Return bounded HTTP 503 `PROVIDER_BUSY` for overlapping inference rather than
+  queueing behind the active upstream call. HTTP and timeout tests prove a busy
+  request makes no second API call and failures release provider capacity.
 - Recorded exact v0.1.1 signature, SBOM/provenance and native arm64 mTLS replay
   of four real-queue cases: ACCEPT, two REJECT and withheld-evidence REVIEW.
 - Fixed false-positive Docker health: a placeholder credential could previously
