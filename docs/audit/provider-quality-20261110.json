@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_PROVIDER_EVALUATION_PASS",
+  "owner": "advance-screening",
+  "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:defd441f47c59631312678aafb27451bb5df3fd424f56ba69afdfd677409fc00",
+  "release_digest": "sha256:86f668d8bbf64a0eb88127e2740f1f94fbec0514f99d607494509661acbed982",
+  "live_architecture": "linux/arm64",
+  "anonymous_mtls_rejected": true,
+  "wrong_release_rejected_before_inference": true,
+  "isolated_test_cleanup_preserved": true,
+  "production_identities_verified": false,
+  "owner_admission": "PENDING_OWNER_DEPLOYMENT_GATE",
+  "full_platform_production_ready": false,
+  "evidence_scope": "real queued public material plus explicitly withheld-evidence regressions; provider-only replay, not a full owner-worker E2E",
+  "raw_reports": [
+    {
+      "path": "/var/tmp/aelev-production-admission.wDuzQd/advance-mtls/advance-screening-quality.json",
+      "sha256": "7d58735b7d842ba1685f655ed203c2fa2b1a6c3ed0e76f083897d5a0f9d64b92",
+      "original_status": "FAIL"
+    },
+    {
+      "path": "/var/tmp/aelev-production-admission.wDuzQd/advance-remaining-mtls/advance-screening-quality.json",
+      "sha256": "f7640465eb577983a7f7586f96708456e7a611d0db5d57cb0ce2e6134043ceab",
+      "original_status": "BOUNDED_EVAL_PASS"
+    }
+  ],
+  "results": [
+    {
+      "case_id": "real-queued-site-current-policy",
+      "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+      "http_status": 200,
+      "initial_expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "request_sha256": "eba68008ee0025e3a64d74a67c8cfaccc3e8b2783b3c420bbbf8fa0f010809ee",
+      "output_sha256": "f4a8b5ceab1d22f3631ea2f3f345164d2d6d4b4a3f5dec33d4db56c90a07bca8",
+      "elapsed_seconds": 5.358,
+      "semantic_review": "PASS"
+    },
+    {
+      "case_id": "real-library-current-policy",
+      "job_id": "0b5a8d38-0896-5aa4-a4e4-4406c590eee6",
+      "http_status": 200,
+      "initial_expected": "REJECT",
+      "observed": "REVIEW",
+      "request_sha256": "38ec746fbb39a1344b719dbdce9ba6b2eb6ce2c1da7bb70cd5b7435719b3081c",
+      "output_sha256": "736bc502da8a3648ada564fe416c9954b659fc950db3e7392b531e559a301953",
+      "elapsed_seconds": 6.953,
+      "semantic_review": "PASS",
+      "fixture_discrepancy": "Preserved initial expected REJECT vs observed REVIEW. The source is one incomplete homepage; conservative review is justified and does not approve the site. No provider or expected answer was changed to force a pass."
+    },
+    {
+      "case_id": "real-church-service-current-policy",
+      "job_id": "2172f90e-4fc5-53b7-96b2-57f3b88aab3b",
+      "http_status": 200,
+      "initial_expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "5f3b8279b3ca69e6a5fad9ac9328a703e67059126d2bcbfec7d0d2f0c263281c",
+      "output_sha256": "ef527fc6b0ec7802f0a63751b1b4ac0a4aee3254ddcd01fac6d4abc6f933af25",
+      "elapsed_seconds": 6.127,
+      "semantic_review": "PASS"
+    },
+    {
+      "case_id": "real-parked-domain-current-policy",
+      "job_id": "69e89d61-52bb-5289-aee3-0e1cfecf1227",
+      "http_status": 200,
+      "initial_expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "1cd9c705939d796d4af52e1e7ffac12eafedf9d411844242d36b83e5b0de4e96",
+      "output_sha256": "be15a0b1bc677a4aeb218f9aee8a5a6751b39d0da0386030b69be4ef3ae87dfb",
+      "elapsed_seconds": 4.523,
+      "semantic_review": "PASS"
+    },
+    {
+      "case_id": "same-queue-site-evidence-withheld",
+      "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+      "http_status": 200,
+      "initial_expected": "REVIEW",
+      "observed": "REVIEW",
+      "request_sha256": "47184519658507f14f53fde6d66c8f4f77d3b965bf2753b040237652c2ae4fbc",
+      "output_sha256": "538ca2b13e7b91d25dd587f768dfa6473a569633ae0975d53c4741317c755015",
+      "elapsed_seconds": 3.145,
+      "semantic_review": "PASS"
+    }
+  ]
+}

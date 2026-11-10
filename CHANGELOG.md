@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Recorded exact v0.1.0 signature, native arm64 mTLS and real-queue evaluation
+  evidence, including a preserved conservative REVIEW fixture discrepancy.
+  Owner production admission remains a separate deployment gate.
 - Recomputed prompt, execution and neutral release digests after canonical
   single-newline file normalization.
 - Created an independent OpenAI Responses API provider for the opaque Advance
