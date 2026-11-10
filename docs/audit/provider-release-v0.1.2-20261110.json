@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_PROVIDER_QUALITY_PASS",
+  "release_tag": "v0.1.2",
+  "owner": "advance-screening",
+  "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:ebaa9668b2534c12790e337749ff2ae756f2f858b9d2e4b387ef1cf999871cd9",
+  "artifact_source_commit": "64933d1587837baf7905c2c1613ab2fb353ad660",
+  "release_digest": "sha256:86f668d8bbf64a0eb88127e2740f1f94fbec0514f99d607494509661acbed982",
+  "live_architecture": "linux/arm64",
+  "evaluation_scope": "SITE_RELEVANCE real queue material and retained current policy; isolated component replay",
+  "started_at": "2026-11-10T21:53:23.960572+00:00",
+  "finished_at": "2026-11-10T21:55:46.594112+00:00",
+  "corpus_sha256": "f484b28885e49cf392bc64e02d42fc7e468ffb3c7443841d0793ed03768a4d29",
+  "hash_format": "SHA-256 of UTF-8 JSON with sorted keys, compact separators and ensure_ascii=false; request/response hashes cover complete opaque envelopes",
+  "case_count": 4,
+  "semantic_reviewer": "Codex",
+  "cases": [
+    {
+      "id": "real-queued-site-current-policy",
+      "provenance": {
+        "source": "advance-screening persisted result and collection",
+        "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "request_sha256": "eba68008ee0025e3a64d74a67c8cfaccc3e8b2783b3c420bbbf8fa0f010809ee",
+      "response_sha256": "0c079a8e2c54fc794d2c17b78d3246c5f9e8ea04e349ee1ad4859cd90fd97c61",
+      "elapsed_seconds": 5.737,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "real-church-service-current-policy",
+      "provenance": {
+        "source": "advance-screening own queue; immutable Base handoff replay, not full Advance collection",
+        "job_id": "2172f90e-4fc5-53b7-96b2-57f3b88aab3b",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "5f3b8279b3ca69e6a5fad9ac9328a703e67059126d2bcbfec7d0d2f0c263281c",
+      "response_sha256": "ceeab7eb8fa48b0de3b3e84d6a5a9775723789b84a1c361d4d8893c4ae34cf12",
+      "elapsed_seconds": 5.501,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "real-parked-domain-current-policy",
+      "provenance": {
+        "source": "advance-screening own queue; immutable Base handoff replay, not full Advance collection",
+        "job_id": "69e89d61-52bb-5289-aee3-0e1cfecf1227",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "1cd9c705939d796d4af52e1e7ffac12eafedf9d411844242d36b83e5b0de4e96",
+      "response_sha256": "fd966a21111d114b2802f50e31f63a2fd980c66edfe2c294d3592174f5153989",
+      "elapsed_seconds": 4.871,
+      "semantic_review": "PASS"
+    },
+    {
+      "id": "same-queue-site-evidence-withheld",
+      "provenance": {
+        "source": "Explicit incomplete-evidence regression derived from actual queue site",
+        "job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+        "policy_digest": "sha256:90fdad3461d8d24ff6778e9a812d78afbd97c3e1ee35dc55a23efb1674dbd014"
+      },
+      "expected": "REVIEW",
+      "observed": "REVIEW",
+      "request_sha256": "47184519658507f14f53fde6d66c8f4f77d3b965bf2753b040237652c2ae4fbc",
+      "response_sha256": "f00c06b5c6147f779047085e616eddc9ff0beea6a849c3fc53f0c5a8d3ff4206",
+      "elapsed_seconds": 2.887,
+      "semantic_review": "PASS"
+    }
+  ],
+  "supply_chain": {
+    "source_audit_run": 42906378878,
+    "release_run": 42907481776,
+    "signature_identity": "https://github.com/sapogov1978/AELEV-advance-screening-provider/.github/workflows/release.yml@refs/tags/v0.1.2",
+    "signature_issuer": "https://token.actions.githubusercontent.com",
+    "platforms": [
+      "linux/amd64",
+      "linux/arm64"
+    ]
+  },
+  "evidence_sha256": {
+    "advance-screening-quality.json": "8d006a0470d47da06ff4f63a319d5a667815b0cee72e60994cc2840017bbf3ab",
+    "signature.json": "04f210d4d42098125a7214f21e72b33558c3062f911608514e26af140be1a74f",
+    "manifest.json": "ebaa9668b2534c12790e337749ff2ae756f2f858b9d2e4b387ef1cf999871cd9",
+    "provenance.json": "2c03c54553f865a4c38b2b844e493d477b9982f39e4c1fb8c7b6582bebaa0b62",
+    "sbom.json": "ab2c2fce888e533f27fb797c7b3dbca6596d5c04e51684cb85c89d37773d65a1"
+  },
+  "mtls_scope": "ISOLATED_TEST_IDENTITIES",
+  "anonymous_tls_rejected": true,
+  "wrong_release_rejected": true,
+  "cleanup_preserved": true,
+  "queue_resume_issued": false,
+  "raw_evidence_path": "/var/tmp/aelev-production-admission.wDuzQd/advance-v012/advance-screening-quality.json",
+  "remaining_gates": [
+    "IMAGE_VULNERABILITY_ADMISSION",
+    "FUNCTIONAL_OWNER_ADMISSION",
+    "PERMANENT_OWNER_IDENTITIES",
+    "OWNER_WORKER_E2E"
+  ],
+  "production_admission": "BLOCKED_IMAGE_VULNERABILITIES",
+  "security": {
+    "schema_version": 1,
+    "recorded_at": "2026-11-10T22:42:12.541403+00:00",
+    "image_id": "sha256:ebaa9668b2534c12790e337749ff2ae756f2f858b9d2e4b387ef1cf999871cd9",
+    "source_commit": "64933d1587837baf7905c2c1613ab2fb353ad660",
+    "working_tree_dirty": false,
+    "scanner": "Version: 0.76.1\nVulnerability DB:\n  Version: 2\n  UpdatedAt: 2026-11-10 19:01:23.081219346 +0000 UTC\n  NextUpdate: 2026-11-11 19:01:23.081218965 +0000 UTC\n  DownloadedAt: 2026-11-10 22:42:07.939275 +0000 UTC",
+    "severity_counts": {
+      "CRITICAL": 2,
+      "HIGH": 49,
+      "LOW": 96,
+      "MEDIUM": 113,
+      "UNKNOWN": 10
+    },
+    "vulnerability_gate": "BLOCKED",
+    "production_admission": "NOT_EVALUATED",
+    "files": {
+      "vulnerabilities.json": "69f9a76c8bc2fc50ee49fb037832c98b3924fa9dd86a4f5ace242cfc70307c02",
+      "sbom.cdx.json": "300ea62cc5847d080de3ccca60fb5bf6cd9e93d0d9c690ffbfa614848419a184"
+    }
+  }
+}

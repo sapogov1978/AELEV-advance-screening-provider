@@ -2,6 +2,22 @@
 
 ## Unreleased
 
+- Added an immutable-image runtime probe and CI receipt for both Python
+  environments, absent build tools/SQLite, MiniZip and systemd-homed. It runs
+  without network or credentials and does not claim complete CVE admission.
+- Removed the unused distribution SQLite library from runtime after a dry-run
+  proved it has no dependent package removals. The provider exposes no SQL;
+  functional-owner storage, queues and application locks are unaffected.
+- Release builds refresh the OS-update stage instead of reusing its cache;
+  image builds assert build tools are absent from both Python environments.
+- Isolated the runtime from the Poetry builder after exact-image scanning
+  found vulnerable build-only tools in the published image. The Python/OS and
+  application dependency locks are unchanged; global and virtualenv installers
+  are removed from the runtime. Distribution vulnerability admission remains open.
+- Recorded the exact v0.1.2 image's native mTLS replay of the frozen four-case
+  real-queue corpus after the bounded-capacity correction. Source, signature,
+  platform attestations and raw request/response hashes are bound in the report;
+  image security scanning and functional-owner admission remain separate gates.
 - Return bounded HTTP 503 `PROVIDER_BUSY` for overlapping inference rather than
   queueing behind the active upstream call. HTTP and timeout tests prove a busy
   request makes no second API call and failures release provider capacity.
