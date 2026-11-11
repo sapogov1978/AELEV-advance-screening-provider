@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Require exact client/server SPIFFE identities and fresh SPIRE delivery for
+  production mTLS. Reload leaf and CA generations for new connections, block
+  stale or withdrawn material and retain the existing model/dependency locks.
+  Certificate inspection uses bounded in-memory OpenSSL handshakes, without
+  network access, a new dependency or a private Python certificate parser.
 - Verified signed v0.1.3 on both native architectures against the reviewed
   runtime profile, and reviewed four actual mTLS inference responses from the
   frozen real-queue corpus. Raw CVEs remain recorded; functional-owner scope,
