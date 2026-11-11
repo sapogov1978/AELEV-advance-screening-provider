@@ -6,6 +6,11 @@ material over mutually authenticated HTTPS and calls the OpenAI Responses API.
 Model ID, prompt and credential remain provider-owned and never cross the
 opaque port.
 
+Release [v0.1.3](docs/audit/provider-release-v0.1.3-20261111.md) has verified
+signatures, source provenance, both native architecture security profiles and
+four reviewed real-material inference cases. Its bounded component evaluation
+does not grant functional-owner policy-scope or deployment admission.
+
 The initial lock selects `gpt-6.1-sol`, medium reasoning, `store=false` and a
 strict JSON schema. The neutral [release.json](release.json) intentionally
 contains no provider identity. It is not quality-admitted until a representative

@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "status": "COMPONENT_RELEASE_VERIFIED",
+  "recorded_at": "2026-11-11T00:11:28.994699+00:00",
+  "release_tag": "v0.1.3",
+  "owner": "advance-screening",
+  "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:292529de6c9f8346e84a2dabeff81df9cff75920f40191bb51267043ae27cb93",
+  "artifact_source_commit": "1eda5a7431e0c3fa38fd2506852460e2fc32f24f",
+  "live_architecture": "linux/arm64",
+  "corpus_sha256": "f484b28885e49cf392bc64e02d42fc7e468ffb3c7443841d0793ed03768a4d29",
+  "case_count": 4,
+  "automated_checks": "PASS",
+  "semantic_reviewer": "Codex",
+  "quality_scope": "Frozen retained real queue material and policy, replayed through isolated mTLS; four site-relevance cases. Not deployed owner collection, queue processing, or cascade E2E.",
+  "cases": [
+    {
+      "id": "real-queued-site-current-policy",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "request_sha256": "eba68008ee0025e3a64d74a67c8cfaccc3e8b2783b3c420bbbf8fa0f010809ee",
+      "response_sha256": "9814a4d5d364c323afc22eaf3f5951537cc564a01d7c9a33d73f58b9d4111830",
+      "elapsed_seconds": 4.321,
+      "semantic_review": "PASS: Observed policy-relevant recurring sections support ACCEPT; no unsupported site-wide coverage claim."
+    },
+    {
+      "id": "real-church-service-current-policy",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "5f3b8279b3ca69e6a5fad9ac9328a703e67059126d2bcbfec7d0d2f0c263281c",
+      "response_sha256": "799e0fda15ce97e54dff96d55dbcc1bf5f769e189ee414c262f7bcb64fd8f92d",
+      "elapsed_seconds": 4.126,
+      "semantic_review": "PASS: Supplied church accounting and fundraising material matches the retained policy exclusions."
+    },
+    {
+      "id": "real-parked-domain-current-policy",
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "request_sha256": "1cd9c705939d796d4af52e1e7ffac12eafedf9d411844242d36b83e5b0de4e96",
+      "response_sha256": "9ec8a411587c8ccc40282386abc6e4f10ec2704fa3aa3d576763193cf9be9634",
+      "elapsed_seconds": 3.43,
+      "semantic_review": "PASS: Supplied sale listing is distinguished from substantive policy material; domain spelling alone is not evidence."
+    },
+    {
+      "id": "same-queue-site-evidence-withheld",
+      "expected": "REVIEW",
+      "observed": "REVIEW",
+      "request_sha256": "47184519658507f14f53fde6d66c8f4f77d3b965bf2753b040237652c2ae4fbc",
+      "response_sha256": "2a2cf388fe03bb6de973f20f4a7e925e83c8d2e0b62d56c90461eed750cbc69f",
+      "elapsed_seconds": 2.848,
+      "semantic_review": "PASS: Missing documents yield REVIEW with null relevance rather than invented site evidence."
+    }
+  ],
+  "security": {
+    "status": "SCOPED_SECURITY_PASS",
+    "architectures": {
+      "linux/amd64": {
+        "status": "SCOPED_SECURITY_PASS",
+        "raw_severity_counts": {
+          "CRITICAL": 1,
+          "HIGH": 35,
+          "LOW": 88,
+          "MEDIUM": 96,
+          "UNKNOWN": 10
+        },
+        "unresolved_high_critical_package_findings": 0,
+        "reviewed_profile_sha256": "b8e13fed27509b6379fd28352b840c2f3c0292c2149746a7e6bf6a58b6288824"
+      },
+      "linux/arm64": {
+        "status": "SCOPED_SECURITY_PASS",
+        "raw_severity_counts": {
+          "CRITICAL": 1,
+          "HIGH": 35,
+          "LOW": 88,
+          "MEDIUM": 96,
+          "UNKNOWN": 10
+        },
+        "unresolved_high_critical_package_findings": 0,
+        "reviewed_profile_sha256": "b8e13fed27509b6379fd28352b840c2f3c0292c2149746a7e6bf6a58b6288824"
+      }
+    },
+    "scope": "Default reviewed opaque Python entrypoint, UID 10001, read-only root, zero effective capabilities, no-new-privileges, empty fstab. Findings remain in raw scans; no claim that distribution packages are patched.",
+    "future_unreviewed_high_critical": "BLOCK"
+  },
+  "supply_chain": {
+    "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:292529de6c9f8346e84a2dabeff81df9cff75920f40191bb51267043ae27cb93",
+    "source": "1eda5a7431e0c3fa38fd2506852460e2fc32f24f",
+    "signature_identity": "https://github.com/sapogov1978/AELEV-advance-screening-provider/.github/workflows/release.yml@refs/tags/v0.1.3",
+    "platforms": [
+      "linux/amd64",
+      "linux/arm64"
+    ],
+    "status": "SUPPLY_CHAIN_PASS",
+    "source_audit_run": 42924968681,
+    "release_run": 42925398607
+  },
+  "evidence_sha256": {
+    "release-digest.txt": "edf24875a1ebc648b7dcbbea0da073a42b17f3f6e1bd393447ca97cb11d40342",
+    "signature.json": "da1846f1cb1560422c521dbff566cd8660e840a6f87daf1701ae3d299b5a7049",
+    "manifest.json": "292529de6c9f8346e84a2dabeff81df9cff75920f40191bb51267043ae27cb93",
+    "provenance.json": "2c3749e1b6a7c4ea04c6f37b5bda89cdf3fbe8dc0a2b3d8f33294fd6d694ba7a",
+    "sbom.json": "e89c1a54cba52542135300874260a6608b0447bc445fbbcdc059856fc8755cb6",
+    "supply-chain-verification.json": "303731920e466d17d716ccc600e80b9d07eb492a222eb0f96af3aa39bfe414c6",
+    "security-amd64.json": "d4461c561b40b2ebcc5ccf8011ee202073a75502417164186e85b48058c24aaf",
+    "security-arm64.json": "d77db04cab69dee00166eb3faf11ecf542626b6fef1c2c2ae204f2aa7fc4cebd",
+    "vulnerabilities-amd64.json": "14558aa286651822b72015f0427cfbb15d09d589bf579ecbf89be6a9c50c4961",
+    "vulnerabilities-arm64.json": "a541eae3c0f0efd456a3a15c75738d78b9994aed516f3987b531918466ac7e4e",
+    "advance-screening-quality.json": "55700309b83c399a111c581d551008268020d2b376a1f49fe38e428134c94189"
+  },
+  "raw_evidence_path": "/var/tmp/aelev-production-admission.wDuzQd/advance-v013/advance-screening-quality.json",
+  "queue_resume_issued": false,
+  "remaining_gates": [
+    "FUNCTIONAL_OWNER_POLICY_SCOPE_ADMISSION",
+    "PERMANENT_OWNER_IDENTITIES",
+    "OWNER_WORKER_E2E"
+  ],
+  "anonymous_tls_rejected": true,
+  "wrong_release_rejected": true,
+  "cleanup_preserved": true
+}

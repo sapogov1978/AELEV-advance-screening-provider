@@ -24,9 +24,12 @@ configuration.
 
 ## Admission
 
-A healthy process proves only local configuration. Before changing
-`release.json` from `NOT_ADMITTED`, run representative site-relevance evals with
-the exact image/model/prompt, review failures and record the approved admission
-scope. Changing the model, prompt or execution profile requires a new provider
+A healthy process proves only local configuration. Run representative
+site-relevance evals with the exact image/model/prompt, review failures and
+record the approved scope in the functional owner's admission record.
+The published descriptor is immutable; editing its `NOT_ADMITTED` field is
+not an admission mechanism. The bounded v0.1.3 review is recorded in the
+[exact-release report](docs/audit/provider-release-v0.1.3-20261111.md).
+Changing the model, prompt or execution profile requires a new provider
 release and evaluation. Rollback replaces only the provider image and release
 digest; it never clears the Advance Screening queue or implies `RESUME`.

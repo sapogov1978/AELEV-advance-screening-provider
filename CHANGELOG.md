@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Verified signed v0.1.3 on both native architectures against the reviewed
+  runtime profile, and reviewed four actual mTLS inference responses from the
+  frozen real-queue corpus. Raw CVEs remain recorded; functional-owner scope,
+  permanent identities and deployed worker admission remain separate.
 - Added source/lock/gate-bound CVE applicability evidence for the restricted
   provider entrypoint. Raw findings remain visible; unknown HIGH/CRITICAL,
   changed reviewed code/dependencies and missing controls block admission.
