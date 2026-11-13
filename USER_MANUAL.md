@@ -67,3 +67,8 @@ in the [exact-release report](docs/audit/provider-release-v0.1.4-20261111.md).
 Changing the model, prompt or execution profile requires a new provider
 release and evaluation. Rollback replaces only the provider image and release
 digest; it never clears the Advance Screening queue or implies `RESUME`.
+
+The exact [v0.1.5 component report](docs/audit/provider-release-v0.1.5-20261113.md)
+records current-session trust admission, both native security gates and one
+selected real-material inference. It retains the limited replay scope, prior
+corpus availability and remaining owner/identity/physical deployment gates.

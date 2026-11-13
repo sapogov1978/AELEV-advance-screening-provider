@@ -1,0 +1,144 @@
+{
+  "schema_version": 4,
+  "status": "COMPONENT_RELEASE_VERIFIED",
+  "recorded_at": "2026-11-13T14:23:18.579831+00:00",
+  "release_tag": "v0.1.5",
+  "owner": "advance-screening",
+  "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:e39ff8422fd0dcdea3d947c28d2db41e9618713b1a43c3118554b361a4db8662",
+  "artifact_source_commit": "e7fb2530bb2e2b3ef187501b33c715a836cc1f9e",
+  "native_platform": "linux/arm64",
+  "case_count": 1,
+  "quality_scope": "One selected actual real-material regression through the exact released mTLS image. Fresh public bytes collected/projected by evaluator using owner code. This is not deployed Gateway/owner collection, current-active-policy queue processing, cascade E2E or physical-host acceptance.",
+  "case": {
+    "id": "actual-queued-site-and-policy",
+    "http_status": 200,
+    "observed": "ACCEPT",
+    "elapsed_seconds": 8.462,
+    "request_sha256": "6ab82d55c1cdc3ee200bb7d9af64f557cd5137d845424b9f3f32251304c24729",
+    "response_sha256": "bd7e9688550908bdfb3b248d324dc3bab121c5b8d994e2563cd828913b65c644",
+    "semantic_review": "PASS: The supplied policy and actual Federal Reserve extracts support central banking, monetary policy, financial stability, payment systems, interest rates and economic reporting. Exclusion claims are limited to supplied evidence. Confidence is uncalibrated."
+  },
+  "baseline": {
+    "report": "provider-release-v0.1.4-20261111.json",
+    "comparison": {
+      "status": "BYTE_IDENTICAL_INFERENCE_AND_LOCKS",
+      "baseline": "v0.1.4",
+      "current_source": "e7fb2530bb2e2b3ef187501b33c715a836cc1f9e",
+      "sha256": {
+        "poetry.lock": "5f69f6ec0ae7ca9daa3514d76b70efc1e6891d68ce3c31370b9993a0e3bce22b",
+        "provider.lock.json": "9b4001b4327f5f0b1258346f44efa0ac82ccc7ba6e68a0174cb9abc4693fee83",
+        "release.json": "86f668d8bbf64a0eb88127e2740f1f94fbec0514f99d607494509661acbed982",
+        "prompts/site-relevance-v1.txt": "db151a2ef41ac66693eaad3f6250ecc6fc8c53f2e53307b9eb592391a029d8a7",
+        "src/aelev_advance_screening_provider/engine.py": "10d0d77f53f24d78dafeac0028b49eeae49722342b6443f2642f7ebd803a706c",
+        "src/aelev_advance_screening_provider/app.py": "722fa62e4134f50fee481a82032ae469a95c7bacfbb1791e746174580d21bed7",
+        "src/aelev_advance_screening_provider/contract.py": "099726baff0ff70f499781edd0a8de1beb785ab312cb59a594c21c15b85de4b2"
+      }
+    },
+    "historical_corpus_replayed_in_this_run": false,
+    "historical_raw_paths_available_in_this_run": false,
+    "scope": "Published historical review is linked, not relabelled as a new full-corpus replay."
+  },
+  "tls": {
+    "anonymous_rejected": true,
+    "same_ca_foreign_peer_rejected": true,
+    "expected_server_uri_checked_before_request": true,
+    "test_pki": true,
+    "permanent_native_identity_admitted": false
+  },
+  "native_security": {
+    "amd64": {
+      "status": "SCOPED_SECURITY_PASS",
+      "raw_severity_counts": {
+        "CRITICAL": 1,
+        "HIGH": 35,
+        "LOW": 88,
+        "MEDIUM": 106,
+        "UNKNOWN": 4
+      },
+      "unresolved_high_critical_package_findings": 0
+    },
+    "arm64": {
+      "status": "SCOPED_SECURITY_PASS",
+      "raw_severity_counts": {
+        "CRITICAL": 1,
+        "HIGH": 35,
+        "LOW": 88,
+        "MEDIUM": 106,
+        "UNKNOWN": 4
+      },
+      "unresolved_high_critical_package_findings": 0
+    }
+  },
+  "supply_chain": {
+    "status": "SUPPLY_CHAIN_PASS",
+    "image": "ghcr.io/sapogov1978/aelev-advance-screening-provider@sha256:e39ff8422fd0dcdea3d947c28d2db41e9618713b1a43c3118554b361a4db8662",
+    "source": "e7fb2530bb2e2b3ef187501b33c715a836cc1f9e",
+    "signature_identity": "https://github.com/sapogov1978/AELEV-advance-screening-provider/.github/workflows/release.yml@refs/tags/v0.1.5",
+    "platforms": [
+      "linux/amd64",
+      "linux/arm64"
+    ],
+    "engine_image_id": "sha256:e39ff8422fd0dcdea3d947c28d2db41e9618713b1a43c3118554b361a4db8662",
+    "native_architecture": "linux/arm64",
+    "source_audit_run": 43427910315,
+    "release_run": 43428409253,
+    "per_platform_attestation_links_verified": true,
+    "per_platform_exact_vcs_source_verified": true,
+    "per_platform_spdx_inventory_verified": true
+  },
+  "native_tests": {
+    "source": {
+      "service": "advance",
+      "target": "test",
+      "image_id": "sha256:c7ff8704318d3275d27196cb9d2d84817e0b8e1ac25d475e623291f1c84842c6",
+      "returncode": 0,
+      "summary": [
+        "53 passed, 2 skipped in 4.06s"
+      ],
+      "inference_requested": false,
+      "log": "/Users/ksap/.local/share/aelev/evidence/provider-trust-rotation-20261113/advance-native-test-tests.log"
+    },
+    "image_health_and_empty_mount": {
+      "service": "advance",
+      "target": "runtime",
+      "image_id": "sha256:d61eb138cac9b22fbbb172761b16e25f2b1b70f8d95477b23ed71802ba069a89",
+      "returncode": 0,
+      "summary": [
+        "2 passed in 34.81s"
+      ],
+      "inference_requested": false,
+      "log": "/Users/ksap/.local/share/aelev/evidence/provider-trust-rotation-20261113/advance-native-runtime-tests.log"
+    }
+  },
+  "cleanup_preserved": true,
+  "working_runtime_switched": false,
+  "queue_resume_issued": false,
+  "owner_current_policy_e2e": false,
+  "physical_multihost_proven": false,
+  "evidence_sha256": {
+    "real-material-live.json": "4b3c776a157ee9e9a8d59425b8ce3e863d09d0074ff8a64bf6e5e0c9d39dff9f",
+    "live-provider.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "signature.json": "bdd50d8e6c2175e88885e5e744b8cb019efd5600d56db35ca8e99a3386b59767",
+    "manifest.json": "e39ff8422fd0dcdea3d947c28d2db41e9618713b1a43c3118554b361a4db8662",
+    "provenance.json": "47f371c83292ed2831b984081c9394322a088c2bfb2687037cf59db5d5d4a3f0",
+    "sbom.json": "07fd229ea22c4a3481c5c2d5a0aa3a98dd19dda45c72107a3c79a8f9ff515059",
+    "supply-chain-verification.json": "fc9f016a1ee1ce74c98ddd4eb58564e334cf53334fdcd3adebe056b019ed7f19",
+    "security-amd64.json": "6518ebe8734127e52f222abb265cbea1d9778bde85b62039648b76d04b492000",
+    "security-arm64.json": "6c0b488606194d1977a055a6a62a6062849dd0a80d4e650607ab936f523c0691",
+    "vulnerabilities-amd64.json": "e95610c6fa800760e1286c6eb20cc532cf604ccc1b31caa0166f557b21a7674d",
+    "vulnerabilities-arm64.json": "7fa6c2dbb3596bea312b9d01000940a6076d6d0dece4f51bb8af49b3a5048c1b",
+    "inference-baseline.json": "6a4d20c162198eb3e7c66d772f20404c551b66708d6eb90b364fb1095b5127a5"
+  },
+  "raw_evidence_path": "/Users/ksap/.local/share/aelev/evidence/provider-trust-rotation-20261113/advance-release/real-material-live.json",
+  "remaining_gates": [
+    "PERMANENT_NATIVE_IDENTITIES_AND_EGRESS",
+    "FUNCTIONAL_OWNER_ADMISSION_AND_CURRENT_SCOPE",
+    "PHYSICAL_MULTIHOST",
+    "PLATFORM_END_TO_END",
+    "DEPLOYMENT_SITE_ADMISSION"
+  ],
+  "real_queue_job_id": "eed64507-005f-5f0b-a217-c802af4fb391",
+  "policy_ref": "sha256:42ab853736a92014343b4b5c50e42ea9c632611519634f151e260148a7bb8be5",
+  "collection_mode": "EVALUATOR_HTTPS_ADAPTER_WITH_OWNER_ALGORITHM_NOT_DEPLOYED_GATEWAY",
+  "material_evidence_sha256": "05a46727189c85ea38b05aeecd66539df543a08f60ebdffaf754ee239d9040b6"
+}
